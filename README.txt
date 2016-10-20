@@ -15,5 +15,6 @@ Step 5: Project could be executed by using user interface such as chrome post ma
     		{"productCode":"3", "productName":"ProdC", "productCategory":"C", "quantity":"3", "price":"40"}
 		]
 		
-		
+
+Note: Security part is not implemented. oAuth, JWT or spring security could be used. I will update this project with JWT by 23/10/2016.	
 
