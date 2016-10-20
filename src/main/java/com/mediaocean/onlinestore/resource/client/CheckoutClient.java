@@ -56,6 +56,7 @@ public class CheckoutClient {
 		int srNo=1;
 		for(ProductCost pc: productCost){
 			System.out.println(srNo+"\t"+pc.getProductName()+"\t\t"+pc.getQuantity()+"\t\t"+pc.getUnitPrice()+"\t\t"+pc.getTaxLevied()+"\t"+pc.getTotalPrice());
+			srNo++;
 		}
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("Sub Total\t\t\t\t\t\t\t"+subTotal);
@@ -63,7 +64,8 @@ public class CheckoutClient {
 		System.out.println("Total Tax\t\t\t\t\t\t\t"+totalTax);
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("Total Bill\t\t\t\t\t\t\t"+totalBill);
-
+		
+		
 	}
 
 }
