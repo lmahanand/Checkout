@@ -25,9 +25,9 @@ public class CheckoutClient {
 
 		Product[] products = new Product[3];
 
-		Product p1 = new Product(1, "A", "ProdA", 1, 100);
-		Product p2 = new Product(2, "B", "ProdB", 2, 50);
-		Product p3 = new Product(3, "C", "ProdC", 3, 40);
+		Product p1 = new Product(1, "A", "ProdA", 3, 100);
+		Product p2 = new Product(2, "B", "ProdB", 7, 50);
+		Product p3 = new Product(3, "C", "ProdC", 2, 40);
 
 		products[0] = p1;
 		products[1] = p2;

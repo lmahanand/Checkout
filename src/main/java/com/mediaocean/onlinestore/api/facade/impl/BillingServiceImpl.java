@@ -54,19 +54,19 @@ public class BillingServiceImpl implements BillingService {
 
 			BigDecimal totalCost = taxCost.add(priceWithoutTax);
 			totalBill = totalBill.add(totalCost);
-			taxCost = taxCost.setScale(3, BigDecimal.ROUND_CEILING);
+			taxCost = taxCost.setScale(2, BigDecimal.ROUND_CEILING);
 			prodCost.setTaxLevied(taxCost.toString());
 
-			totalCost = totalCost.setScale(3, BigDecimal.ROUND_CEILING);
+			totalCost = totalCost.setScale(2, BigDecimal.ROUND_CEILING);
 			prodCost.setTotalPrice(totalCost.toString());
 
 			productCost[i] = prodCost;
 			i++;
 		}
 
-		subTotal = subTotal.setScale(3, BigDecimal.ROUND_CEILING);
-		totalBill = totalBill.setScale(3, BigDecimal.ROUND_CEILING);
-		totalTax = totalTax.setScale(3, BigDecimal.ROUND_CEILING);
+		subTotal = subTotal.setScale(2, BigDecimal.ROUND_CEILING);
+		totalBill = totalBill.setScale(2, BigDecimal.ROUND_CEILING);
+		totalTax = totalTax.setScale(2, BigDecimal.ROUND_CEILING);
 
 		itemizedBill.setProductCost(productCost);
 		itemizedBill.setSubTotal(subTotal.toString());
