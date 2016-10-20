@@ -49,7 +49,7 @@ public class CheckoutClient {
 		String subTotal = itemizedBill.getSubTotal();
 		String totalTax = itemizedBill.getTotalTax();
 		String totalBill = itemizedBill.getTotalBill();
-		System.out.println("\t\t\tItemized Bill");
+		System.out.println("\t\t\tITEMIZED BILL");
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("Sr No.\tProduct Name\tQuantity\tUnit Price\tTax\tPrice");
 		System.out.println();
