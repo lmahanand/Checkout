@@ -3,6 +3,8 @@ package com.mediaocean.onlinestore.api.facade.impl;
 import java.math.BigDecimal;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.mediaocean.onlinestore.api.facade.BillingService;
 import com.mediaocean.onlinestore.domain.model.ItemizedBill;
 import com.mediaocean.onlinestore.domain.model.Product;
@@ -10,6 +12,7 @@ import com.mediaocean.onlinestore.domain.model.ProductCost;
 import com.mediaocean.onlinestore.util.SalesTax;
 
 public class BillingServiceImpl implements BillingService {
+	private static Logger log = Logger.getLogger(BillingServiceImpl.class); 
 
 	public BillingServiceImpl() {
 
@@ -17,7 +20,7 @@ public class BillingServiceImpl implements BillingService {
 
 	@Override
 	public ItemizedBill generateItemizedBill(List<Product> products) {
-
+		log.info("Generating Itemized bill process started.");
 		ItemizedBill itemizedBill = new ItemizedBill();
 
 		ProductCost[] productCost = new ProductCost[products.size()];
@@ -72,6 +75,8 @@ public class BillingServiceImpl implements BillingService {
 		itemizedBill.setSubTotal(subTotal.toString());
 		itemizedBill.setTotalBill(totalBill.toString());
 		itemizedBill.setTotalTax(totalTax.toString());
+		
+		log.info("Itemized bill : {}"+ itemizedBill);
 
 		return itemizedBill;
 	}

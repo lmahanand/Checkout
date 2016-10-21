@@ -24,8 +24,8 @@ public class BillingServiceImplTest {
 		BillingService service = new BillingServiceImpl();
 		ItemizedBill itemizedBill = service.generateItemizedBill(products);
 		
-		assertEquals("50.001",itemizedBill.getTotalTax());
-		assertEquals("350.000",itemizedBill.getSubTotal());
-		assertEquals("400.001",itemizedBill.getTotalBill());
+		assertEquals("50.01",itemizedBill.getTotalTax());
+		assertEquals("350.00",itemizedBill.getSubTotal());
+		assertEquals("400.01",itemizedBill.getTotalBill());
 	}
 }
