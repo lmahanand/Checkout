@@ -1,4 +1,4 @@
-package com.mediaocean.onlinestore.util;
+package com.mediaocean.onlinestore.auth;
 
 import java.util.ArrayList;
 import java.util.List;

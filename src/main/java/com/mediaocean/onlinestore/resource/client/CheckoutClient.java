@@ -6,9 +6,11 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 
 import org.glassfish.jersey.client.ClientConfig;
+import org.springframework.util.MultiValueMap;
 
 import com.google.gson.Gson;
 import com.mediaocean.onlinestore.domain.model.ItemizedBill;
@@ -22,8 +24,15 @@ public class CheckoutClient {
 		ClientConfig config;
 		Client client;
 		Response response;
+		
+		config = new ClientConfig();
+		client = ClientBuilder.newClient(config);
+		
+		/*target = client.target("http://localhost:8080/checkout-counter/webapi/resource/authenticate")
+					.request().header("username", "username").header("password", "password")
+				.post(Entity.entity(new Gson().toJson(products), MediaType.APPLICATION_JSON), Response.class);*/
 
-		Product[] products = new Product[3];
+		/*Product[] products = new Product[3];
 
 		Product p1 = new Product(1, "A", "ProdA", 3, 100);
 		Product p2 = new Product(2, "B", "ProdB", 7, 50);
@@ -63,7 +72,7 @@ public class CheckoutClient {
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("Total Tax\t\t\t\t\t\t\t"+totalTax);
 		System.out.println("-----------------------------------------------------------------------");
-		System.out.println("Total Bill\t\t\t\t\t\t\t"+totalBill);
+		System.out.println("Total Bill\t\t\t\t\t\t\t"+totalBill);*/
 		
 		
 	}

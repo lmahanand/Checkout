@@ -10,5 +10,8 @@
 	<bean id="resource" class="com.mediaocean.onlinestore.resource.MainResource" />
 	<bean id="billingService"
 		class="com.mediaocean.onlinestore.api.facade.impl.BillingServiceImpl" />
+		
+	<bean id="tokenProcessor"
+		class="com.mediaocean.onlinestore.auth.JWTTokenProcessor" scope="prototype"/>
 
 </beans>
